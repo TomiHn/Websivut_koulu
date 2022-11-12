@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 2em;
+        }
+        .emo{
+            display: flex;
+            background-color: red;
+            color: white;
+        }
+        .emo div{
+            flex: 1;
+        }
+        .eka{
+            order: -1
+        }
+
+        @media (min-width: 700px) {
+            h1{
+                font-size: 3em;
+            }
+            .emo{
+                background-color: black;
+               /* flex-direction: column;*/
+            }
+        }
+        @media (min-width: 900px) {
+            h1{
+                font-size: 4em;
+            }
+            .emo{
+                background-color: green;
+            }
+        }
+        @media (min-width: 1000px) {
+            h1{
+                font-size: 5em;
+            }
+            .emo{
+                background-color: blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="emo">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div class="eka">
+            <h1>5dsakjh jhsaj dasd asdjada kjd dhsajd</h1>
+        </div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

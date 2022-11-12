@@ -1,0 +1,68 @@
+body{
+    background-color: gainsboro;
+    padding-left: 100px;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.vk{
+    background-color: white;
+    width: 300px;
+    padding: 15px;
+    margin: 50px;
+    border-radius: 200px;
+    position: relative;
+}
+.ok{
+    background-color: #26c526;
+    width: 300px;
+    padding: 15px;
+    margin: 50px;
+    border-radius: 200px;
+    position: relative;
+}
+.vk::after{
+    content: "";
+    display: block;
+    background-color: white;
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    transform: rotate(-87deg) skew(30deg, 36deg);
+    left: -10px;
+    top: 31px;
+    z-index: -1;
+}
+.ok::after {
+    content: "";
+    display: block;
+    background-color: #26c526;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: rotate(-10deg) skew(30deg, 36deg);
+    right: -8px;
+    top: 30px;
+}
+#oik::before {
+    content: "Luettu";
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: -20px;
+    font-size: 0.6em;
+    color: gray;
+}
+button{
+    background-color: #c52626;
+    /*width: 150px;*/
+    border-radius: 200px;
+    font-size: 0.5em;
+    padding: 20px 40px;
+    font-weight: bold;
+    border: 0;
+    box-shadow: 3px 5px 15px 0px #818181;
+}
+button:hover{
+    background-color: gray;
+    box-shadow: 0px 0px 0px 0px #818181;
+}

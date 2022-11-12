@@ -1,0 +1,53 @@
+body{
+    margin: 0%;
+}
+h1{
+    text-align: center;
+    position: sticky;
+    top: 0vh;
+    /*bottom: 100vh;*/
+    background-color: rgb(46 46 242);
+    height: 5vh;
+    font-weight: bold;
+    margin-bottom: 0%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+nav {
+    position: sticky;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px; 
+    background-color: rgb(231, 113, 113);
+    top: 8vh;
+    color: black;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    max-width: 60%;
+}
+nav a{
+    text-decoration: none;
+    padding-right: 15px;
+}
+nav a:visited{
+    color: black;
+    text-decoration: none;
+}
+.otsikko{
+    font-size: 2em;
+    padding-top: 100px;
+}
+.teksti{
+    font-size: 2em;
+}
+#linktotop{
+    position: fixed;
+    left: 180vh;
+    top: 95vh;
+    font-size: 1.5em;
+    color: red;
+    width: 30vh;
+    /*padding: 11px;*/
+    background-color: white;

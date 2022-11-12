@@ -1,0 +1,39 @@
+body {
+    font-family: Roboto, sans-serif;
+    min-height: 100vh;
+    margin: 0%;
+    background: linear-gradient(45deg, rgb(3 4 26), rgb(22 61 145));
+}
+h1{
+    font-size: 3.3em;
+    margin-bottom: 1.2em;
+    color: white
+}
+main{
+    width: 70%;
+    max-width: 300px;
+    margin: auto;
+    padding-top: 100px;
+    }
+form div{
+    margin-bottom: 30px;
+}
+form label{
+    color: whitesmoke;
+}
+form input {
+    width: calc( 100% - 34px);
+    background-color: rgb(22 61 145 / 20%);
+    border: 2px solid rgba(245, 245, 245, 0.479);
+    color: white;
+    font-size: 1em;
+    line-height: 2.7em;
+    padding: 0 15px;
+}
+form input[type="submit"] {
+    width: auto;
+    padding: 0 30px;
+    float: right;
+    color: black;
+    background-color: whitesmoke;
+}

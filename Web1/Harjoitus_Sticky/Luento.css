@@ -1,0 +1,39 @@
+main{
+    min-height: 200vh;
+}
+footer{
+    padding: 30px;
+    color: white;
+    background-color: black;
+}
+header{
+    background-color: chocolate;
+    padding: 30px;
+    position: sticky;
+    width: 100%;
+    top: 0%;
+}
+header nav ul li{
+    display: inline-block;
+}
+section{
+    height: 100vh;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    background-color: blue;
+    color: white;
+}
+.sticky::after{
+    background-color: red;
+    content: "moi";
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.sticky::before{
+    background-color: red;
+    content: "moi";
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
