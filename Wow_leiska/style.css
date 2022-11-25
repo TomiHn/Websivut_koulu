@@ -17,7 +17,7 @@ section, aside{
 .corner_thing {
     background: rgb(0, 0, 0);
     height: 340px;
-    width: 140%;
+    width: 130%;
     position: relative;
     top: -285px;
     /* right: -50px; */
@@ -30,13 +30,14 @@ section, aside{
     transform: rotate(6deg);
     position: absolute;
     height: 185%;
-    width: 100%;
+    width: 108%;
     top: -20%;
     left: 0;
     background-image: url(./Kuvat/earth-g6870fce9f_1920.jpg);
     margin-top: -105px;
     background-attachment: fixed;
     background-position: bottom;
+    background-repeat: no-repeat;
 }
 h1{
     font-size: 110px;
