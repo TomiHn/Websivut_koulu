@@ -69,7 +69,8 @@ header div div{
 .css_text {
     color: black;
     left: 486px;
-    top: 185px;
+    /* top: 220px; */
+    bottom: -180px;
     display: inline-block;
     width: 170px;
     margin: 0;
@@ -103,6 +104,16 @@ nav div a{
 }
 
 /* -----TÄHTÄIN SIVU----- */
+.page1 h1, .page1 h2{
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+}
+.page1 h1{
+    font-size: 3.5em;
+}
+.page1 h2{
+    font-size: 2.5em;
+}
 .page1{
     z-index: 0;
 }
@@ -115,8 +126,9 @@ nav div a{
 }
 .p2_grid div img {
     height: 130vh;
-    right: 250px;
+    right: 220px;
     top: 130px;
+    margin-right: -150px;
     position: relative;
     filter: invert(15%);
     opacity: 0.5;
