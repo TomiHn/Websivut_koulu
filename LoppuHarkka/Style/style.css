@@ -104,34 +104,8 @@ nav div a{
 }
 
 /* -----TÄHTÄIN SIVU----- */
-.page1 h1, .page1 h2{
-    font-family: 'Source Code Pro', monospace;
-    margin: 0;
-}
-.page1 h1{
-    font-size: 3.5em;
-}
-.page1 h2{
-    font-size: 2.5em;
-}
 .page1{
     z-index: 0;
-}
-.p2_grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.page1 div div div{
-    position: relative;
-}
-.p2_grid div img {
-    height: 130vh;
-    right: 220px;
-    top: 130px;
-    margin-right: -150px;
-    position: relative;
-    filter: invert(15%);
-    opacity: 0.5;
 }
 .bg_container{
     overflow: hidden;
@@ -145,4 +119,102 @@ nav div a{
     width: 100%;
     height: 200vh;
     opacity: 0.1;
+}
+/* -----OIKEA PUOLI----- */
+.p1_header h1, .page1 h2{
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+}
+.p1_header h1{
+    font-size: 3.5em;
+    margin-top: 110px;
+}
+.p1_header h2 {
+    font-size: 2.5em;
+    color: red;
+    margin-top: -18px;
+    margin-left: 10px;
+}
+.p1_content{
+    max-width: 55vh;
+    font-size: 0.9em;
+}
+.p1_content p{
+    margin-top: 80px;
+}
+
+.p1_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.p1_grid div img {
+    height: 130vh;
+    right: 220px;
+    top: 130px;
+    margin-right: -150px;
+    position: relative;
+    filter: invert(15%);
+    opacity: 0.5;
+}
+.p1_content ul {
+    list-style-position: inside;
+    margin-left: -40px;
+    margin-top: 30px;
+}
+.p1_content ul li {
+    margin-bottom: 15px;
+    border-bottom: #80808036 solid 1px;
+    padding-bottom: 10px;
+}
+.p1_header span{
+    margin-top: 20px;
+}
+.bottom_fade {
+    display: block;
+    width: 100%;
+    position: absolute;
+    background-color: #000000;
+    height: 60px;
+    top: 887px;
+}
+
+/* -----LAATIKKO SIVU----- */
+.page2 h2{
+    text-align: center;
+    font-size: 2.5em;
+}
+.p2_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+.p1_box{
+    align-items: center;
+    justify-content: center;
+}
+#grid1 {
+    text-align: center;
+    /* display: block; */
+    background-color: rgb(255, 77, 0);
+    max-width: 120px;
+}
+#grid2 {
+    text-align: center;
+    /* display: block; */
+    background-color: rgb(240, 13, 74);
+    max-width: 120px;
+}
+#grid3 {
+    text-align: center;
+    /* display: block; */
+    background-color: rgb(0, 115, 255);
+    max-width: 120px;
+}
+#grid4{
+    text-align: center;
+    /* display: block; */
+    background-color: rgb(123, 0, 255);
+    max-width: 120px;
 }
