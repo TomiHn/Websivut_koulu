@@ -36,6 +36,8 @@ header div div{
     top: 15px;
     width: 130px;
     height: 68px;
+    /* justify-items: end; */
+    /* display: contents; */
     position: relative;
 }
 .header_left p{
@@ -57,8 +59,7 @@ header div div{
     font-size: 2em;
     font-weight: bold;
     display: block;
-    position: relative;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     width: 100px;
 }
 .header_right p {
@@ -68,12 +69,12 @@ header div div{
 }
 .css_text {
     color: black;
-    left: 486px;
+    /* left: 475px; */
     /* top: 220px; */
-    bottom: -180px;
+    bottom: 42px;
     display: inline-block;
     width: 170px;
-    margin: 0;
+    margin-left: 475px;
     position: relative;
 }
 
@@ -86,7 +87,7 @@ nav{
 nav div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color: whitesmoke;
+    background-color: #e3e3e3;
     color: black;
 }
 nav div a{
@@ -98,7 +99,7 @@ nav div a{
     background-color: #d3d3d3;
 }
 .nav_contact{
-    background-color: red;
+    background-color: #fd1f31;
     color: white;
     border-right: none;
 }
@@ -169,6 +170,7 @@ nav div a{
 .p1_header span{
     margin-top: 20px;
 }
+/* -----SMOOTHI PALKKI----- */
 .bottom_fade {
     display: block;
     width: 100%;
@@ -185,36 +187,83 @@ nav div a{
 }
 .p2_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 200px 200px;
     grid-row: auto;
-    column-gap: 40px;
-    row-gap: 40px;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-left: 320px;
 }
-.p1_box{
-    align-items: center;
+.p2_right {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-right: 90px;
+    text-align: center;
+}
+.p2_left {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: 90px;
+    text-align: center;
 }
 #grid1 {
-    text-align: center;
+    /* text-align: center; */
     /* display: block; */
-    background-color: rgb(255, 77, 0);
-    max-width: 120px;
+    background-color: rgb(140 33 34);
+    /* max-width: 120px; */
 }
 #grid2 {
-    text-align: center;
-    /* display: block; */
-    background-color: rgb(240, 13, 74);
-    max-width: 120px;
+    background-color: rgb(150 3 64);
 }
 #grid3 {
-    text-align: center;
-    /* display: block; */
-    background-color: rgb(0, 115, 255);
-    max-width: 120px;
+    background-color: rgb(41 55 115);
 }
 #grid4{
+    background-color: rgb(65 40 114);
+}
+.p2_footer {
+    margin-left: 410px;
+    background-color: #fd0014;
+    width: 240px;
+    height: 40px;
+}
+.p2_footer p {
+    display: flex;
+    justify-content: flex-start;
+    line-height: 40px;
+    margin-left: 15px;
+}
+
+/* -----VIDEO SIVU----- */
+#catvideo {
+    width: 100%;
+    height: 90vh;
+    margin-top: 100px;
+}
+/* -----PÄHKINÄ SIVU----- */
+
+.page4 {
+    height: 140vh;
+    color: black;
     text-align: center;
-    /* display: block; */
-    background-color: rgb(123, 0, 255);
-    max-width: 120px;
+}
+.p4_bgimage {
+    background-image: url(../IMG/pexels-andreea-ch-3969099.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 140vh;
+}
+.p4_header{
+    margin-top: 20px;
+}
+.p4_header h2 {
+    font-size: 2.4em;
+    text-align: center;
+    /* max-width: 370px; */
+    padding-top: 80px;
+}
+.p4_content {
+    text-align: left;
+    max-width: 500px;
 }
