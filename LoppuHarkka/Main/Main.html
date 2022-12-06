@@ -84,8 +84,8 @@
                 </div>
                 <span>Source: wework.com</span>
               </div>
-              <div class="bottom_fade"></div>
               <!--Smoothi sivunvaihto-->
+              <div class="bottom_fade"></div>
             </div>
           </div>
         </div>
@@ -185,32 +185,57 @@
       </section>
       <!-- Contact sivu -->
       <section class="page6" id="contact">
-        <h2>Contact us</h2>
-        <form action="">
-          <label for="name">Name</label> <br />
-          <input type="text" name="name" id="" /> <br />
-          <label for="email">Email</label> <br />
-          <input type="email" name="email" id="" /><br />
-          <label for="phonenumber">Phone</label><br />
-          <input type="number" name="phonenumber" id="" /><br />
-          <input type="checkbox" name="consent" id="consent" />
-          <label for="consent"
-            >We will constantly bombard you with emails it is ok to you?</label
-          >
-          <input type="submit" value="" />
-        </form>
+        <div id="p6_bgcolor"></div>
+        <div id="p6_content">
+          <h2>Contact us</h2>
+          <form>
+            <div class="form_container">
+              <label class="input_label" for="name">Name</label> <br />
+              <input class="input_box" type="text" name="name" id="name" />
+            </div>
+            <div class="form_container">
+              <label class="input_label" for="email">Email</label> <br />
+              <input class="input_box" type="email" name="email" id="email" />
+            </div>
+            <div class="form_container">
+              <label class="input_label" for="phonenumber">Phone</label><br />
+              <input
+                class="input_box"
+                type="number"
+                name="phonenumber"
+                id="phonenumber"
+              />
+            </div>
+            <div class="consent_container">
+              <label
+                ><input type="checkbox" name="consent" id="consent" />We will
+                constantly bombard you with <br />
+                emails it is ok to you?</label
+              >
+            </div>
+            <button type="submit" id="submit">></button>
+          </form>
+        </div>
       </section>
       <!-- Contact info sivu -->
       <section class="page7">
-        <h2>Contact info</h2>
-        <div>
-          <div>
-            <p></p>
-            <p></p>
-            <p>I know</p>
-            <p>HTML</p>
-            <div>
-              <p>Also a little bit CSS</p>
+        <div class="p7_content" id="p7_fade">
+          <h2>Contact info</h2>
+          <div id="p7_sticky">
+            <div class="p7_container">
+              <div class="p7_left">
+                <p>SATAKUNNAN AMMATTIKORKEAKOULU</p>
+                <p>Satakunnankatu 23</p>
+                <p>28130 Pori</p>
+                <span>(02) 620 30000</span>
+              </div>
+              <div>
+                <p>I know</p>
+                <p>HTML</p>
+                <div>
+                  <p>Also a little bit of CSS</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

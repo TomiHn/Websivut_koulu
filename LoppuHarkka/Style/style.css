@@ -2,7 +2,7 @@ body{
     background-color: black;
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
-    
+    max-height: 882px;
 }
 main{
     max-width: 1060px;
@@ -10,13 +10,17 @@ main{
     margin: auto;
 }
 
+
 /* -------HEADER------- */
-header{
+header {
     background-image: url(../IMG/pexels-quang-nguyen-vinh-2175952.jpg);
-    height: 71vh;
+    height: 620.22px;
     background-size: cover;
-    /* margin-top: -200px; */
     background-attachment: fixed;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    max-width: 1060px;
+    margin: auto;
 }
 .header_text{
     position: relative;
@@ -36,8 +40,6 @@ header div div{
     top: 15px;
     width: 130px;
     height: 68px;
-    /* justify-items: end; */
-    /* display: contents; */
     position: relative;
 }
 .header_left p{
@@ -59,7 +61,6 @@ header div div{
     font-size: 2em;
     font-weight: bold;
     display: block;
-    /* margin-left: 10px; */
     width: 100px;
 }
 .header_right p {
@@ -69,8 +70,6 @@ header div div{
 }
 .css_text {
     color: black;
-    /* left: 475px; */
-    /* top: 220px; */
     bottom: 42px;
     display: inline-block;
     width: 170px;
@@ -78,12 +77,17 @@ header div div{
     position: relative;
 }
 
+
+
+
 /* -----NAV----- */
 nav {
     position: sticky;
-    top: 0;
-    z-index: 1;
-    line-height: 1.8;
+    top: 0px;
+    z-index: 10;
+    line-height: 2.5;
+    max-width: 1060px;
+    margin: auto;
 }
 nav div{
     display: grid;
@@ -91,13 +95,13 @@ nav div{
     background-color: #e3e3e3;
     color: black;
 }
-nav div a{
+nav div a {
     border-right: 1px solid #00000047;
     text-align: center;
     text-decoration: none;
     color: black;
-    height: 30px;
     background-color: #d3d3d3;
+    height: 40px;
 }
 .nav_contact{
     background-color: #fd1f31;
@@ -105,27 +109,38 @@ nav div a{
     border-right: none;
 }
 
+
+
+
 /* -----TÄHTÄIN SIVU----- */
 .page1{
     z-index: 0;
+    max-width: 1060px;
+    margin: auto;
 }
 .bg_container{
     overflow: hidden;
     position: relative;
-    height: 130vh;
+    height: 1146.6px;
 }
 .bg_image{
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 130vh;
+    height: 1146.6px;
     opacity: 0.1;
 }
+
+
+
+
 /* -----OIKEA PUOLI----- */
 .p1_header {
-    margin-left: -220px;
     max-width: 300px;
+    position: relative;
+    left: 600px;
+    bottom: 800px;
 }
 .p1_header h1, .page1 h2{
     font-family: 'Source Code Pro', monospace;
@@ -142,24 +157,21 @@ nav div a{
     margin-left: 22px;
 }
 .p1_content{
-    max-width: 55vh;
+    max-width: 485.1px;
     font-size: 1.2em;
 }
 .p1_content p{
     margin-top: 80px;
 }
 
-.p1_grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 .p1_grid div img {
-    height: 90vh;
+    height: 793.8px;
     right: 275px;
     top: 130px;
     position: relative;
     filter: invert(15%);
     opacity: 0.5;
+    margin-right: -220px;
 }
 .p1_content ul {
     list-style-position: inside;
@@ -176,17 +188,15 @@ nav div a{
 }
 /* -----SMOOTHI PALKKI----- */
 .bottom_fade {
-    display: flex;
     width: 100%;
     position: absolute;
-    /* background-color: #000000; */
     height: 100px;
-    /* top: 1050px; */
-    flex-direction: column-reverse;
     bottom: 0;
-    background-image: linear-gradient(to bottom, rgb(0 0 0 / 13%), black);
-
+    background-image: linear-gradient(to bottom, #0000001f, rgb(0 0 0 / 77%), black);
 }
+
+
+
 
 /* -----LAATIKKO SIVU----- */
 
@@ -260,37 +270,50 @@ nav div a{
 
 
 /* -----VIDEO SIVU----- */
+.page3{
+    max-width: 1060px;
+    margin: auto;
+}
 #catvideo {
     width: 100%;
-    height: 90vh;
+    height: 793.8px;
     margin-top: 100px;
 }
+
+
+
 /* -----PÄHKINÄ SIVU----- */
 
 .page4 {
-    height: 90vh;
+    height: 705.6px;
     color: black;
     text-align: center;
+    width: 100%;
+    max-width: 1880px;
 }
+
 .p4_bgimage {
     background-image: url(../IMG/pexels-andreea-ch-3969099.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 140vh;
+    background-position: center;
+    height: 1060.6px;
 }
 .p4_header{
     margin-top: 20px;
 }
 .p4_header h2 {
-    font-size: 2.4em;
+    font-size: 3.4em;
     text-align: center;
-    /* max-width: 370px; */
     padding-top: 80px;
 }
 .p4_content {
     text-align: left;
     max-width: 500px;
-    margin-left: 85px;
+    position: relative;
+    left: 100px;
+    top: 60px;
+    font-size: 1.3em;
 }
 .p4_footer {
     margin: 0;
@@ -298,7 +321,13 @@ nav div a{
     line-height: 0.1;
 }
 
+
+
 /* -----ABOUT US SIVU----- */
+.page5 {
+    margin-bottom: 80px;
+    margin-top: 485.1px;
+}
 .page5 h2{
     text-align: center;
     font-size: 3.5em;
@@ -381,20 +410,114 @@ nav div a{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
+
+/* -----CONTACT SIVU----- */
 .page6 {
     background-color: #fd0014;
-    height: 100vh;
+    height: 749.7px;
 }
+
 .page6 h2 {
     display: flex;
     justify-content: center;
     font-size: 3em;
+    padding-top: 80px;
 }
 .page6 form {
     text-align: center;
     font-size: 1.2em;
     color: #ffffffd9;
 }
-.page6 form input {
+
+.input_box {
     background-color: #fd1a2c;
+    height: 30px;
+    width: 350px;
+    border: #ffffffb0 solid 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.input_label {
+    color: #ffffffa6;
+    margin-right: 300px;
+}
+.consent_container{
+    margin-left: -165px;
+}
+#consent {
+    margin-left: 160px;
+    margin-top: 20px;
+}
+#consent_label{
+    color: #ffffffa6;
+} 
+#submit {
+    border-radius: 50%;
+    border: white solid 1px;
+    width: 50px;
+    height: 50px;
+    margin-left: 300px;
+    color: white;
+    background-color: #fd0014;
+    font-size: 1.1em;
+}
+#submit:hover{
+    background-color: gray;
+    transition: 0.2s;
+}
+
+/* ----- CONTACT INFO ------ */
+.page7 {
+    background-image: url(../IMG/pexels-burst-373893.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1270px;
+    margin: auto;
+    z-index: -1;
+}
+#p7_fade {
+    background-color: #000000a1;
+    z-index: 1;
+    height: 1270px;
+}
+.page7 h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 4em;
+    position: sticky;
+    top: 30%;
+    margin-bottom: 100px;
+}
+.p7_content{
+    z-index: 2;
+}
+.p7_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    color: black;
+    width: 720px;
+
+    left: 30%;
+}
+#p7_sticky {
+    position: sticky;
+    display: flex;
+    top: 50%;
+    justify-content: center;
+    height: 155px;
+}
+.p7_left {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.p7_left p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.p7_left span{
+    position: relative;
+    top: 20px;
 }
