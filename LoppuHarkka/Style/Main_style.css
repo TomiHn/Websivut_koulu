@@ -2,7 +2,6 @@ body {
   background-color: black;
   font-family: "Noto Sans", sans-serif;
   margin: 0;
-  max-height: 882px;
 }
 main {
   max-width: 1060px;
@@ -18,7 +17,6 @@ header {
   background-attachment: fixed;
   background-position: 50% 15%;
   background-repeat: no-repeat;
-  max-width: 1060px;
   margin: auto;
 }
 .header_text {
@@ -82,7 +80,6 @@ nav {
   top: 0px;
   z-index: 10;
   line-height: 2.5;
-  max-width: 1060px;
   margin: auto;
 }
 nav div {
@@ -108,7 +105,6 @@ nav div a {
 /* -----TÄHTÄIN SIVU----- */
 .page1 {
   z-index: 0;
-  max-width: 1060px;
   margin: auto;
 }
 .bg_container {
@@ -132,8 +128,9 @@ nav div a {
   left: 600px;
   bottom: 800px;
 }
-.p1_header h1,
-.page1 h2 {
+
+.page1 h2,
+.page1 h1 {
   font-family: "Source Code Pro", monospace;
   margin: 0;
 }
@@ -272,20 +269,18 @@ nav div a {
 /* -----PÄHKINÄ SIVU----- */
 
 .page4 {
-  height: 705.6px;
+  /* height: 705.6px; */
   color: black;
   text-align: center;
-  width: 100%;
-  max-width: 1880px;
-}
-
-.p4_bgimage {
+  /* width: 100%; */
+  /* max-width: 1880px; */
   background-image: url(../IMG/pexels-andreea-ch-3969099.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 1060.6px;
 }
+
 .p4_header {
   margin-top: 20px;
 }
@@ -427,14 +422,19 @@ nav div a {
   margin-right: 300px;
 }
 .consent_container {
-  margin-left: -165px;
+  /* margin-left: -165px; */
+  max-width: 400px;
+  position: relative;
+  left: 350px;
+  bottom: 25px;
+  font-family: "Roboto Mono";
+}
+.consent_container label {
+  text-align: left;
+  color: #ffffff8a;
 }
 #consent {
-  margin-left: 160px;
   margin-top: 20px;
-}
-#consent_label {
-  color: #ffffffa6;
 }
 #submit {
   border-radius: 50%;
@@ -445,6 +445,7 @@ nav div a {
   color: white;
   background-color: #fd0014;
   font-size: 1.1em;
+  font-family: "Source Code Pro";
 }
 #submit:hover {
   background-color: gray;
@@ -526,7 +527,7 @@ nav div a {
   margin-right: 7px;
   font-family: "Roboto Mono", monospace;
 }
-.p7_right {
+.p7_html {
   color: black;
   position: relative;
   left: 180px;
