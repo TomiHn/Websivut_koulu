@@ -11,38 +11,96 @@
   }
   header {
     background-position-y: 20%;
+    height: 300px;
   }
   .header_text {
     position: relative;
-    top: 56%;
+    top: 15%;
     text-align: center;
   }
   .header_left {
     position: relative;
-    left: 0;
+    left: 65px;
     font-size: 1.4em;
     width: 100px;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .header_left p {
-    margin-top: 28px;
+    margin: 0;
+    bottom: 0;
   }
   .header_right {
     font-size: 1.4em;
     position: relative;
-    /* right: 0px; */
-    /* top: 3px; */
+    top: 5px;
   }
   .css_text {
     position: relative;
-    left: 0;
+    left: 11px;
     font-size: 0.8em;
-    bottom: 23px;
+    bottom: 17px;
     margin: 0;
   }
+  #menu_button {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    top: 0.3%;
+    left: 0.6%;
+    z-index: 100;
+    background-color: #d3d3d3;
+    padding-right: 3px;
+    padding-left: 3px;
+    border: #2929295c solid 1px;
+  }
+
+
+  
+  #line1, #line2, #line3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  #line2{
+    background-color: red;
+  }
+  
   nav div {
     display: none;
+    font-size: 0.7em;
+    line-height: 1;
+    position: fixed;
+    top: 0.2%;
+    left: 0.5%;
   }
+  nav div.open {
+    display: block;
+    background-color: #d3d3d3;
+    border: black solid 1px;
+    padding-top: 40px;
+  }
+  nav div.closed{
+    display: none;
+  }
+  nav div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #2929295c 1px solid;
+    font-size: 0.8em;
+    max-width: 70px;
+    border-right: none;
+  }
+  .nav_home{
+    border-top: #2929295c 1px solid;
+  }
+
+  
   /* .p1_grid img {
     max-width: 320px;
   } */
@@ -53,18 +111,24 @@
   }
   .p1_header h1 {
     font-size: 3.7em;
+    text-align: center;
   }
   .p1_header h2 {
     font-size: 2.5em;
     margin-top: -18px;
+    text-align: center;
   }
 
   .p1_content {
     font-size: 1.2em;
     max-width: none;
+    margin-left: 20px;
   }
   .p1_content ul {
     max-width: 220px;
+    margin-left: 20px;
+  }
+  .page1 span{
     margin-left: 20px;
   }
 
@@ -115,7 +179,7 @@
   .p4_content {
     font-size: 0.7em;
     max-width: 230px;
-    left: 0;
+    left: 20px;
   }
   .page4 {
     height: 700px;
@@ -128,7 +192,7 @@
     height: 700px;
   }
   .page5 {
-    margin-top: 200px;
+    /* margin-top: 200px; */
   }
   .page5 h2 {
     font-size: 2.5em;
@@ -145,11 +209,12 @@
   }
   .page6 form {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     /* color: #ffffffd9; */
   }
   .input_label {
     margin: 0;
+    float: left;
   }
   .input_box {
     width: 280px;
@@ -161,7 +226,7 @@
     width: 240px;
     /* margin-left: 0; */
     font-size: 0.9em;
-    left: 0;
+    left: 18px;
   }
   .consent_container label {
     max-width: 250px;
@@ -171,26 +236,79 @@
   }
   #submit {
     position: relative;
-    left: 0;
+    left: 100px;
     bottom: 30px;
     margin: 0;
   }
   .page7 h2 {
-    font-size: 2.6em;
+    font-size: 2.3em;
+    top: 0%;
+  }
+  #p7_sticky{
+    top: 10%;
+  }
+  .p7_left {
+    margin-top: 15px;
+    margin-left: 15px;
+    max-width: 140px;
+  }
+  .p7_right{
+    position: relative;
+    left: 45px;
+    width: 100px;
   }
   .p7_container {
     max-width: 300px;
-    width: 300px;
+    width: 255px;
     display: block;
     font-size: 0.5em;
+    height: 170px;
+    background-color: #ffffff5e;
   }
   #p7_iknow {
-    left: 0;
+    left: 15px;
+    display: flex;
+    height: 35px;
+    width: 65px;
+    align-items: center;
+    justify-content: center;
+    top: 35px;
   }
   .p7_title_footer {
-    left: 0;
+    left: 58px;
+    bottom: 18px;
+  }
+  .p7_title footer{
+    left: 60px;
+    width: 100px;
+    position: relative;
   }
   .p7_html {
-    left: 0;
+    left: 15px;
+    bottom: 8px;
+    width: 58px;
+    margin: 0;
+  }
+  .p7_html p{
+    position: relative;
+    left: 70px;
+  }
+  #p7_iknow p {
+    margin-left: 0;
+  }
+  #p7_iknow span {
+    border-bottom: 2px solid white;
+    position: relative;
+    bottom: 4px;
+    font-size: 0.6em;
+    margin-right: 3px;
+    font-family: "Roboto Mono", monospace;
+  }
+  .page7 a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    bottom: -50px;
+    left: 0px;
   }
 }

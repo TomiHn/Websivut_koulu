@@ -75,6 +75,9 @@ header div div {
 }
 
 /* -----NAV----- */
+#menu_button{
+  display: none;
+}
 nav {
   position: sticky;
   top: 0px;
@@ -99,7 +102,7 @@ nav div a {
 .nav_contact {
   background-color: #fd1f31;
   color: white;
-  border-right: none;
+  /* border-right: none; */
 }
 
 /* -----TÄHTÄIN SIVU----- */
@@ -306,7 +309,6 @@ nav div a {
 /* -----ABOUT US SIVU----- */
 .page5 {
   margin-bottom: 80px;
-  margin-top: 485.1px;
 }
 .page5 h2 {
   text-align: center;
