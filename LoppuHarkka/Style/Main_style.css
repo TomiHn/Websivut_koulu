@@ -102,7 +102,6 @@ nav div a {
 .nav_contact {
   background-color: #fd1f31;
   color: white;
-  /* border-right: none; */
 }
 
 /* -----TÄHTÄIN SIVU----- */
@@ -272,11 +271,8 @@ nav div a {
 /* -----PÄHKINÄ SIVU----- */
 
 .page4 {
-  /* height: 705.6px; */
   color: black;
   text-align: center;
-  /* width: 100%; */
-  /* max-width: 1880px; */
   background-image: url(../IMG/pexels-andreea-ch-3969099.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -424,12 +420,12 @@ nav div a {
   margin-right: 300px;
 }
 .consent_container {
-  /* margin-left: -165px; */
   max-width: 400px;
   position: relative;
   left: 350px;
   bottom: 25px;
   font-family: "Roboto Mono";
+  text-align: left;
 }
 .consent_container label {
   text-align: left;

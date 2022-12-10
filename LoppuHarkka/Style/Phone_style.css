@@ -1,21 +1,21 @@
 @media only screen and (max-width: 320px) {
   body {
-    /* background-color: red; */
     margin: 0;
     max-width: 320px;
-    /* overflow: hidden; */
   }
   main {
     max-width: 320px;
     margin: 0;
   }
+
+  /* -----HEADER----- */
   header {
     background-position-y: 20%;
     height: 300px;
   }
   .header_text {
     position: relative;
-    top: 15%;
+    top: 30%;
     text-align: center;
   }
   .header_left {
@@ -66,10 +66,14 @@
     margin: 6px 0;
     transition: 0.4s;
   }
-  #line2{
+
+  #line2.change{
+    width: 25px;
     background-color: red;
   }
   
+
+  /* -----NAVIGATION----- */
   nav div {
     display: none;
     font-size: 0.7em;
@@ -101,11 +105,8 @@
   }
 
   
-  /* .p1_grid img {
-    max-width: 320px;
-  } */
+  /* -----TÄHTÄIN SIVU----- */
   .p1_header {
-    /* float: left; */
     position: relative;
     left: 0;
   }
@@ -126,12 +127,13 @@
   }
   .p1_content ul {
     max-width: 220px;
-    margin-left: 20px;
+    margin-left: 0px;
   }
   .page1 span{
     margin-left: 20px;
   }
 
+  /* -----LAATIKKO SIVU----- */
   .page2 h2 {
     font-size: 3em;
   }
@@ -166,13 +168,15 @@
     height: 30px;
     font-size: 0.9em;
   }
+
+
+  /* -----VIDEO SIVU----- */
   #catvideo {
     height: 568px;
   }
-  .page3 {
-    max-width: none;
-  }
 
+
+  /* -----PÄHKINÄ SIVU----- */
   .p4_header h2 {
     font-size: 2.5em;
   }
@@ -191,26 +195,30 @@
     background-color: #ffffffa1;
     height: 700px;
   }
-  .page5 {
-    /* margin-top: 200px; */
-  }
+
+
+  /* -----ABOUT US SIVU----- */
   .page5 h2 {
     font-size: 2.5em;
   }
   .p5_grid {
     font-size: 0.7em;
+    row-gap: 30px;
+    column-gap: 30px;
   }
   .person {
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
   }
+
+
+  /* -----CONTACT SIVU----- */
   .page6 h2 {
     font-size: 2em;
   }
   .page6 form {
     text-align: center;
     font-size: 1em;
-    /* color: #ffffffd9; */
   }
   .input_label {
     margin: 0;
@@ -224,8 +232,8 @@
   }
   .consent_container {
     width: 240px;
-    /* margin-left: 0; */
     font-size: 0.9em;
+    text-align: left;
     left: 18px;
   }
   .consent_container label {
@@ -240,12 +248,16 @@
     bottom: 30px;
     margin: 0;
   }
+
+
+  /* -----CONTACT INFO----- */
   .page7 h2 {
     font-size: 2.3em;
-    top: 0%;
+    top: 10%;
+    margin-bottom: 60px;
   }
   #p7_sticky{
-    top: 10%;
+    top: 20%;
   }
   .p7_left {
     margin-top: 15px;
@@ -308,7 +320,7 @@
     text-decoration: none;
     color: white;
     position: relative;
-    bottom: -50px;
-    left: 0px;
+    bottom: 0px;
+    left: 113px;
   }
 }
