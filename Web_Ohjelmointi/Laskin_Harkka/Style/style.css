@@ -1,0 +1,52 @@
+.textBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.text {
+  width: 330px;
+  height: 100px;
+  background-color: #adadadbf;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  align-items: center;
+  font-size: 1.7em;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.bContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  grid-row: auto;
+  row-gap: 20px;
+  width: 330px;
+}
+
+.bContainer1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  width: 330px;
+  margin-top: 30px;
+}
+
+.botFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%;
+  font-size: 1.5em;
+}
