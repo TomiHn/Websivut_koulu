@@ -1,0 +1,117 @@
+/* .allCont{
+    display: flex;
+    justify-content: center;
+} */
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.allCont {
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+button{
+    border-radius: 50%;
+    border: none;
+    background-color: #757575; 
+    font-size: 1.5em;
+}
+
+
+#bDiv, #bX, #bMinus, #bSum, #bEqv{
+    background-color: orange;
+}
+
+#clear, #b0{
+    border-radius: 30px;
+}
+
+.textCont{
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    width: 290px;
+    height: 90px;
+    background-color: gray;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 4;
+}
+
+.topCont{
+    display: flex;
+    justify-content: center;
+}
+
+.topBox{
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.topBox button{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+#clear{
+    width: 210px;
+}
+
+#bDiv{
+    width: 60px;
+}
+
+.midCont{
+    display: flex;
+    justify-content: center;
+}
+
+.midBox{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.midBox button{
+    width: 60px;
+    height: 60px;
+}
+
+.botCont{
+    display: flex;
+    justify-content: center;
+}
+
+.botBox{
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.botBox button{
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+}
+
+#b0{
+    width: 135px;
+}
+
+
