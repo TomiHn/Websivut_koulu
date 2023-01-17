@@ -1,16 +1,20 @@
 window.onload=function(){
     
     function findButton(id){
-        const btn = document.getElementById(id) 
-        return btn
+        return document.getElementById(id) 
     }
 
     
     
-    let buttons = document.querySelectorAll("button");
-    let b1 = findButton("btn1");
+    const buttons = document.querySelectorAll("button");
+    let b1 = findButton("b1");
     let bEqv = findButton("bEq");
-    var text = document.getElementById("text1");
+    let bPlus = findButton("bPlus");
+    let bMinus = findButton("bMinus");
+    let clr = findButton("clear");
+    let text = document.getElementById("text1");
+    let testi = {1:"testi1", 2:"testi2", 3:"testi3", 4:"testi4"};
+
 
 
     buttons.forEach(function(button){
@@ -54,6 +58,9 @@ window.onload=function(){
             }
             if(bEqv.contains(e.target)){
                 console.log(text.innerHTML)
+            }
+            if(clr.contains(e.target)){
+                text.innerHTML = "";
             }
     
         })
