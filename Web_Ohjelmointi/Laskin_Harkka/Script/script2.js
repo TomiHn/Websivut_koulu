@@ -31,7 +31,7 @@ function calculator(){
                 nums.push(parseFloat(display.innerHTML));
                 let sum = nums.join(" ");
                 display.innerHTML = eval(sum);
-                console.log(nums);
+                // console.log(nums);
                 // if(input === "*" || input === "/" || input === "+" || input === "-"){
                 //     nums.length = 0;
                 //     nums.push(parseFloat(display.innerHTML));
