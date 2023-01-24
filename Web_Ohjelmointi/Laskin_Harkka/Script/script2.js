@@ -16,7 +16,7 @@ function calculator(){
                 display.innerHTML = input;
             }
             else{
-                display.innerHTML += display;
+                display.innerHTML += input;
             }
             if (input === "Clear"){
                 display.innerHTML = "";
