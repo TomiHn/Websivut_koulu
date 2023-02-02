@@ -56,12 +56,9 @@ for (let i = 0; i < buttonTexts.length; i++) {
         let clickedButton = e.target;
         inputField.value += clickedButton.innerText;
         // console.log(clickedButton);
-        if (i  == 0){
+        if (i === 0){
             inputField.value = "";
         }
-        // if(document.getElementById("button-0").contains(e.target)){
-        //     inputField.value = "";
-        // }
     });
 
     leftDiv.appendChild(oneButton);
@@ -81,6 +78,9 @@ for (let i = 0; i < actionButtons.length; i++) {
         let clickedButton = e.target;
         inputField.value += clickedButton.innerText;
         // console.log(clickedButton.innerText);
+        if (document.getElementById("action-button-0").contains(e.target)){
+            
+        }
     })
 
     rightDiv.appendChild(oneButton);
