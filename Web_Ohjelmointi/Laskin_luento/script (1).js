@@ -45,6 +45,8 @@ for (let i = 0; i < buttonTexts.length; i++) {
     oneButton.id = "button-" + i;
     oneButton.classList = "button";
 
+    
+
     if (i==0){
         oneButton.classList = "button button-clear";
     }
@@ -54,7 +56,12 @@ for (let i = 0; i < buttonTexts.length; i++) {
 
     oneButton.addEventListener("click", (e) =>{
         let clickedButton = e.target;
-        inputField.value += clickedButton.innerText;
+        if(clickedButton.innerText == ","){
+            inputField.value += "."
+        }
+        else{
+            inputField.value += clickedButton.innerText;
+        }
         // console.log(clickedButton);
         if (i === 0){
             inputField.value = "";
@@ -63,6 +70,40 @@ for (let i = 0; i < buttonTexts.length; i++) {
 
     leftDiv.appendChild(oneButton);
 }
+
+function checkInput(formula){
+    const forbidden = [
+        "function",
+        "Function",
+        "[",
+        "]",
+        "{",
+        "}",
+        "()"
+    ]
+
+    let result = false;
+
+    forbidden.forEach(element => {
+        if (formula.includes(element)){
+            result = true;
+            console.log(element + " | " + formula)
+        }
+    })
+    return result;
+}
+
+function Calc(formula){
+    // console.log("Lasken " + formula);
+    if(!checkInput(formula)){
+        let sum = eval(formula);
+        inputField.value = sum;
+    }
+    else{
+        inputField.value = "Virhe!";
+    }
+}
+
 
 const actionButtons = ["⁒", "X", "-", "+", "="];
 
@@ -76,10 +117,19 @@ for (let i = 0; i < actionButtons.length; i++) {
 
     oneButton.addEventListener("click", (e) =>{
         let clickedButton = e.target;
-        inputField.value += clickedButton.innerText;
-        // console.log(clickedButton.innerText);
-        if (document.getElementById("action-button-0").contains(e.target)){
-            
+
+        let newChar = clickedButton.innerText;
+        if(newChar == "⁒"){
+            newChar = "/";
+        }
+        newChar = newChar.replaceAll(/X/g,"*");
+
+
+        if (newChar != "="){
+            inputField.value += newChar;
+        }
+        else{
+            Calc(inputField.value);
         }
     })
 
