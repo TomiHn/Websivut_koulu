@@ -1,4 +1,5 @@
 let muuttuvaluku = 10;
+
 let autoLista = [
     "Toyota",
     "Volkswagen",
@@ -21,6 +22,8 @@ let autoLista = [
     "Kia",
     "Renault"
 ];
+let newAutoLista = [];
+let autoListaBugatit = autoLista.map(Bugatti); //LISTAN KORJAUS
 
 
 let ohjeArray = [
@@ -41,21 +44,20 @@ for (i = 0; i < ohjeArray.length; i++){
     document.body.appendChild(div);
     div.style.fontSize = "1.4em";
     if (i === ohjeArray.length -1){
-        div.style.marginBottom = "20px";
+        div.style.marginBottom = "30px";
     }
 }
-
-let newAutoLista = [];
-
 
 let div = document.createElement("div");
 div.id = "divi";
 div.innerText = "Div";
+div.style.fontSize = "1.4em";
 document.body.appendChild(div);
 
 let button = document.createElement("button");
 button.id = "nappi";
 button.innerText = "Nappula";
+button.style.fontSize = "1.4em"
 document.body.appendChild(button);
 
 document.getElementById("nappi").addEventListener("click",function(){
@@ -69,6 +71,8 @@ document.getElementById("nappi").addEventListener("click",function(){
     
     console.log("moi", muuttuvaluku);
 
+
+    //DUPLIKAATTIEN POISTO
     if(!newAutoLista.includes(autoListaBugatit[muuttuvaluku])){
         newAutoLista.push(autoListaBugatit[muuttuvaluku]);
         console.log(newAutoLista);
@@ -88,8 +92,56 @@ document.getElementById("nappi").addEventListener("click",function(){
         divi.style.backgroundColor = "red";
     }
 
+    console.log("length: " + newAutoLista.length)
+
     document.getElementById("palkki").innerHTML = autoListaBugatit[muuttuvaluku];
+
+    //MUUTA NAPIN LUONTI
+    let muuta = document.createElement("button");
+    let nappiOn = document.getElementById("muuta");
+    if(!nappiOn){
+        
+        if(newAutoLista.length > 15){
+            muuta.innerText = "Muuta";
+            muuta.id = "muuta";
+            muuta.style.fontSize = "1.4em"
+            document.body.appendChild(muuta);
+            
+        }
+
+        //MUUTA NAPPIIN KLIKKI
+        muuta.addEventListener("click", function(){
+            console.log("muuta painettu");
+            //LISTAN MUUNNOS BOOLEANIKSI
+            let autoListaMuutettu = newAutoLista.map(MuutaLista);
+            console.log(autoListaMuutettu);
+            //FALSEN POISTO
+            for(i = 0; i < autoListaMuutettu.length; i++){
+                if(autoListaMuutettu[i] == false){
+                    autoListaMuutettu.splice(i,1);
+                }
+            }
+
+            //LOPPUTARKASTUS
+            let tarkastusTulos = autoListaMuutettu.every(TarkistaLista)
+            console.log(autoListaMuutettu);
+            
+            if(tarkastusTulos){
+                console.log(autoLista)
+                console.log("Kaikki toimii?")
+            }
+            else{
+                console.log("Joku meni vituiks")
+            }
+        })
+    }
 });
+
+
+
+
+
+
 
 let teepalkki = () => {
     let palkki = document.createElement("div");
@@ -97,26 +149,38 @@ let teepalkki = () => {
     palkki.style.background = "green";
     palkki.style.height = "40px";
     palkki.style.minWidth = "60px";
+    palkki.style.fontSize = "1.4em"
     palkki.innerHTML = autoLista[muuttuvaluku];
     document.body.appendChild(palkki);
 }
 teepalkki();
 
-
-
-
-
+//LISTAN KORJAUS
 function Bugatti(element){
-    if(typeof element != "string" || element == "Error!!!" || element == "2"){
+    if(typeof element != "string" || element.includes("!")|| element == "2"){
         element = "Bugatti";
     }
     return element;
 }
-
-let autoListaBugatit = autoLista.map(Bugatti);
-
-console.log(autoListaBugatit);
-
+//BOOLEAN MUUTOS
+function MuutaLista(element){
+    if(element == "Bugatti"){
+        element = false;
+    }
+    else if(element != "Bugatti"){
+        element = true;
+    }
+    return element;
+}
+//LOPPUTARKASTUS
+function TarkistaLista(element){
+    if(element == true){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
 
 
