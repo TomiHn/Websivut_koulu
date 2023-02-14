@@ -1,0 +1,86 @@
+//0. upota minut html-sivulle ja toteuta seuraavat tehtävät
+//1. korjaa koodia niin, että se läpikäy napin painalluksella 
+// kaikki autoListan tiedot (nyt esim. Renault ei näy koskaan) 
+//2. listassa on virheitä (kaikki tiedot eivät ole automerkkejä)
+//  korjaa lista niin, että kaikki virheet muuttuvat Bugatti-merkkiin
+
+//3. kun nappia (Nappula) painetaan, lisää kyseinen auto UUTEEN listaan
+//4. kun sama merkki tulee uudestaan vastaan sitä ei enää lisätä listaan
+//5. tee ohjelmallisesti uusi nappi kun lista on "täydellinen (16 merkkiä)"
+//  kirjoita nappiin 'muuta'
+
+//6. kun 'muuta' nappia painetaan kaikki Bugatit muuttuvat falseksi ja
+//  muut automerkit trueksi
+
+//7. poista listasta kaikki falset 
+//8. tarkasta every:ä käyttäen sisältääkö lista yhtään falsea  
+//  jos ei tulosta alkuperäinen autolista  
+
+let muuttuvaluku = 10;
+let autoLista = [
+    "Toyota",
+    "Volkswagen",
+    "Opel",
+    false,
+    "Mercedes",
+    "Volvo",
+    "Seat",
+    true,
+    "Skoda",
+    "Mitsubishi",
+    "2",
+    "Tesla",
+    "Saab",
+    "BMW",
+    "Error!!!",
+    "Lada",
+    undefined,
+    "Peugeot",
+    "Kia",
+    "Renault"
+];
+
+let div = document.createElement("div");
+div.id = "divi";
+div.innerText = "Div";
+document.body.appendChild(div);
+
+let button = document.createElement("button");
+button.id = "nappi";
+button.innerText = "Nappula";
+document.body.appendChild(button);
+
+document.getElementById("nappi").addEventListener("click",function(){
+    if(muuttuvaluku < 15){
+        muuttuvaluku++;
+    }
+    else{
+        muuttuvaluku = 0;
+    }
+    
+    console.log("moi", muuttuvaluku);
+
+    let divi = document.getElementById("divi");
+    divi.innerText = "Luku:" + muuttuvaluku;
+
+    if( muuttuvaluku <= 5){
+        divi.style.backgroundColor = "green";
+    }else if(muuttuvaluku >= 6 && muuttuvaluku < 10){
+        divi.style.backgroundColor = "yellow";
+    }else{
+        divi.style.backgroundColor = "red";
+    }
+
+    document.getElementById("palkki").innerHTML = autoLista[muuttuvaluku];
+});
+
+let teepalkki = () => {
+    let palkki = document.createElement("div");
+    palkki.id = "palkki";
+    palkki.style.background = "green";
+    palkki.style.height = "40px";
+    palkki.style.minWidth = "60px";
+    palkki.innerHTML = autoLista[muuttuvaluku];
+    document.body.appendChild(palkki);
+}
+teepalkki();
