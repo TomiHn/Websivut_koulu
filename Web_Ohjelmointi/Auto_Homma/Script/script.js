@@ -99,14 +99,17 @@ document.getElementById("nappi").addEventListener("click",function(){
     //MUUTA NAPIN LUONTI
     let muuta = document.createElement("button");
     let nappiOn = document.getElementById("muuta");
+
+    let mitsubishi = newAutoLista.filter(x => x === "Mitsubishi").length;
+
+
     if(!nappiOn){
         
-        if(newAutoLista.length > 15){
+        if(mitsubishi === 1){
             muuta.innerText = "Muuta";
             muuta.id = "muuta";
             muuta.style.fontSize = "1.4em"
             document.body.appendChild(muuta);
-            
         }
 
         //MUUTA NAPPIIN KLIKKI
