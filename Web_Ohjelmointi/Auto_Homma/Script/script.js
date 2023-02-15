@@ -35,9 +35,9 @@ let ohjeArray = [
     "Tee ohjelmallisesti uusi nappi kun lista on täydellinen (16 merkkiä) kirjoita nappiin 'muuta'",
     "Kun 'muuta' nappia painetaan kaikki Bugatit muuttuvat falseksi ja muut automerkit trueksi",
     "Poista listasta kaikki falset ",
-    "Tarkasta every:ä käyttäen sisältääkö lista yhtään falsea jos ei tulosta alkuperäinen autolista",
+    "Tarkasta every:ä käyttäen sisältääkö lista yhtään falsea jos ei, tulosta alkuperäinen autolista",
 ]
-
+//OHJEIDEN PRINTTAUS
 for (i = 0; i < ohjeArray.length; i++){
     let div = document.createElement("div");
     div.innerText =i + 1 + ". " + ohjeArray[i];
@@ -47,7 +47,7 @@ for (i = 0; i < ohjeArray.length; i++){
         div.style.marginBottom = "30px";
     }
 }
-
+//PETER JUTTUJA
 let div = document.createElement("div");
 div.id = "divi";
 div.innerText = "Div";
@@ -69,17 +69,8 @@ document.getElementById("nappi").addEventListener("click",function(){
     }
     
     
-    console.log("moi", muuttuvaluku);
+    // console.log("moi", muuttuvaluku);
 
-
-    //DUPLIKAATTIEN POISTO
-    if(!newAutoLista.includes(autoListaBugatit[muuttuvaluku])){
-        newAutoLista.push(autoListaBugatit[muuttuvaluku]);
-        console.log(newAutoLista);
-    }
-    else{
-        console.log("Ei lisätty");
-    }
 
     let divi = document.getElementById("divi");
     divi.innerText = "Luku:" + muuttuvaluku;
@@ -95,14 +86,75 @@ document.getElementById("nappi").addEventListener("click",function(){
     console.log("length: " + newAutoLista.length)
 
     document.getElementById("palkki").innerHTML = autoListaBugatit[muuttuvaluku];
-
+    //POISTA DUPLIKAATIT
+    PoistaDupet();
     //MUUTA NAPIN LUONTI
+    MuutaNappi();
+
+});
+
+
+
+
+
+
+
+let TeePalkki = () => {
+    let palkki = document.createElement("div");
+    palkki.id = "palkki";
+    palkki.style.background = "green";
+    palkki.style.height = "40px";
+    palkki.style.minWidth = "60px";
+    palkki.style.fontSize = "1.4em"
+    palkki.innerHTML = autoLista[muuttuvaluku];
+    document.body.appendChild(palkki);
+}
+TeePalkki();
+
+//LISTAN KORJAUS
+function Bugatti(element){
+    if(typeof element != "string" || element.includes("!")|| element == "2"){
+        element = "Bugatti";
+    }
+    return element;
+}
+//BOOLEAN MUUTOS
+function MuutaLista(element){
+    if(element == "Bugatti"){
+        element = false;
+    }
+    else if(element != "Bugatti"){
+        element = true;
+    }
+    return element;
+}
+//LOPPUTARKASTUS
+function TarkistaLista(element){
+    if(element == true){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+//DUPLIKAATTIEN POISTO
+function PoistaDupet(){
+        if(!newAutoLista.includes(autoListaBugatit[muuttuvaluku])){
+            newAutoLista.push(autoListaBugatit[muuttuvaluku]);
+            console.log(newAutoLista);
+        }
+        else{
+            console.log("Ei lisätty");
+        }
+}
+
+//MUUTA NAPIN LUONTI
+function MuutaNappi(){
     let muuta = document.createElement("button");
     let nappiOn = document.getElementById("muuta");
-
+    
     let mitsubishi = newAutoLista.filter(x => x === "Mitsubishi").length;
-
-
     if(!nappiOn){
         
         if(mitsubishi === 1){
@@ -137,51 +189,6 @@ document.getElementById("nappi").addEventListener("click",function(){
                 console.log("Joku meni vituiks")
             }
         })
-    }
-});
-
-
-
-
-
-
-
-let teepalkki = () => {
-    let palkki = document.createElement("div");
-    palkki.id = "palkki";
-    palkki.style.background = "green";
-    palkki.style.height = "40px";
-    palkki.style.minWidth = "60px";
-    palkki.style.fontSize = "1.4em"
-    palkki.innerHTML = autoLista[muuttuvaluku];
-    document.body.appendChild(palkki);
-}
-teepalkki();
-
-//LISTAN KORJAUS
-function Bugatti(element){
-    if(typeof element != "string" || element.includes("!")|| element == "2"){
-        element = "Bugatti";
-    }
-    return element;
-}
-//BOOLEAN MUUTOS
-function MuutaLista(element){
-    if(element == "Bugatti"){
-        element = false;
-    }
-    else if(element != "Bugatti"){
-        element = true;
-    }
-    return element;
-}
-//LOPPUTARKASTUS
-function TarkistaLista(element){
-    if(element == true){
-        return true;
-    }
-    else{
-        return false;
     }
 }
 
