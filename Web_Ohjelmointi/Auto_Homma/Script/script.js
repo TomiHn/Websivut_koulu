@@ -96,9 +96,6 @@ document.getElementById("nappi").addEventListener("click",function(){
 
 
 
-
-
-
 let TeePalkki = () => {
     let palkki = document.createElement("div");
     palkki.id = "palkki";
@@ -109,7 +106,7 @@ let TeePalkki = () => {
     palkki.innerHTML = autoLista[muuttuvaluku];
     document.body.appendChild(palkki);
 }
-TeePalkki();
+    TeePalkki();
 
 //LISTAN KORJAUS
 function Bugatti(element){
@@ -168,7 +165,7 @@ function MuutaNappi(){
         muuta.addEventListener("click", function(){
             console.log("muuta painettu");
             //LISTAN MUUNNOS BOOLEANIKSI
-            let autoListaMuutettu = newAutoLista.map(MuutaLista);
+            let autoListaMuutettu = autoListaBugatit.map(MuutaLista);
             console.log(autoListaMuutettu);
             //FALSEN POISTO
             for(i = 0; i < autoListaMuutettu.length; i++){
