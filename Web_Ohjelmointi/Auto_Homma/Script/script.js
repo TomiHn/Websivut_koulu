@@ -110,7 +110,7 @@ let TeePalkki = () => {
 
 //LISTAN KORJAUS
 function Bugatti(element){
-    if(typeof element != "string" || element.includes("!")|| element == "2"){
+    if(typeof element != "string" || element.includes("!")|| element === "2"){
         element = "Bugatti";
     }
     return element;
@@ -127,7 +127,7 @@ function MuutaLista(element){
 }
 //LOPPUTARKASTUS
 function TarkistaLista(element){
-    if(element == true){
+    if(element){
         return true;
     }
     else{
