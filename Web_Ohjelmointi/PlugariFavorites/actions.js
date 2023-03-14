@@ -13,6 +13,14 @@ let links = [
     {
         "name":"Youtube",
         "url": "https://www.youtube.com/"
+    },
+    {
+        "name": "Mahjong",
+        "url": "https://mahjon.gg/"
+    },
+    {
+        "name": "Leetcode",
+        "url": "https://leetcode.com/"
     }
 ];
 
