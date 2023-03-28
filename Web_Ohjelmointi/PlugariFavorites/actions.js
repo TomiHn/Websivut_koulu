@@ -9,17 +9,29 @@ function initProgram(_storedLinks){
         oneLink.href = link.url;
         oneLink.innerText = link.name;
         oneLink.target = "_BLANK";
+        oneLink.style.fontSize = "1.2em";
         linkContainer.appendChild(oneLink);
     })
 };
 
+let storedLinks = [];
+
 //Linkin poisto
 function RemoveFromList(e, index){
-    console.log("remove element; ", e);
-    
+    // console.log("remove element; ", e);
+    storedLinks.splice(index, 1);
+    UpdateStorage(storedLinks);
+    initProgram(storedLinks);
 }
 
-let storedLinks = [];
+const UpdateStorage = (storedLinks) => {
+    const value = JSON.stringify(storedLinks);
+    chrome.storage.sync.set({listOfLinks:value}, function(){
+        // console.log(`${addedName} Lisättiin`);
+        storedLinks = JSON.parse(value);
+        initProgram(storedLinks);
+    });//set
+}
 chrome.storage.sync.get(["listOfLinks"], function(result){
     // document.getElementById("links").innerHTML = "Ei dataa";
     if(result.listOfLinks){
@@ -32,26 +44,27 @@ chrome.storage.sync.get(["listOfLinks"], function(result){
 let addNew = document.createElement("button");
 addNew.innerHTML = "❤️";
 addNew.classList = "icon add-icon";
+addNew.style.fontSize = "1.5em"
 document.body.appendChild(addNew);
 
 //Options nappi
 let modifyList = document.createElement("button");
 modifyList.innerHTML = "⚙️";
 modifyList.classList = "icon gear-icon"
+modifyList.style.fontSize = "1.5em"
 document.body.append(modifyList);
 
 modifyList.addEventListener("click", function(){
     linkContainer.innerHTML = "";
-    console.log("xd")
+    // console.log("xd")
     storedLinks.forEach((link, index) => {
         let oneLink = document.createElement("div");
         oneLink.classList = "delete-button";
         oneLink.innerHTML = "<span class='icon delete-icon'>-</span><span class='delete-text'>" + link.name + "</span>";
-        oneLink.onclick = (e) => {
-            RemoveFromList(e, index);
-        }
+        oneLink.onclick = (e) => RemoveClick(e, index, cancelModify);
         linkContainer.appendChild(oneLink);
     })
+
 
     modifyList.style.display = "none";
     let cancelModify = document.createElement("button");
@@ -61,9 +74,15 @@ modifyList.addEventListener("click", function(){
         initProgram(storedLinks);
         modifyList.style.display = "inline-block";
         cancelModify.remove();
-        console.log("xdd");
+        // console.log("xdd");
     })
 });
+
+const RemoveClick = (e, _index, cancelModify) => {
+    RemoveFromList(e, _index);
+    modifyList.style.display = "inline-block";
+    cancelModify.remove();
+}
 
 async function GetCurrentTab(){
     let queryOptions = {active: true, lastFocusedWindow: true};
@@ -86,20 +105,11 @@ const AddTab = () => {
             "favicon":favIcon
         });//storedlinks
 
-        // console.log("ennen", storedLinks);
-        const value = JSON.stringify(storedLinks);
-        // console.log("jälkeen" ,value);
-        // console.log("decoded", JSON.parse(value));
-
-        chrome.storage.sync.set({listOfLinks:value}, function(){
-            console.log(tab.title + "Lisättiin");
-            storedLinks = JSON.parse(value);
-            initProgram(storedLinks);
-        });//set
-
-
+        
+        UpdateStorage(storedLinks);
     });//then
 }//GetCurrentTab
+
 
 addNew.addEventListener("click", function(){
     AddTab();

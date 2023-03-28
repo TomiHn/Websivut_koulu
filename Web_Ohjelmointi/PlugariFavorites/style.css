@@ -4,9 +4,25 @@
 
 #links a{
     display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    background-color: #f7f7f7;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#links a:visited{
+    text-decoration: none;
+    color: black;
 }
 .delete-button{
     margin-bottom: 5px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.delete-button:hover{
+    scale: 1.05;
 }
 span.icon.delete-icon {
     background-color: #c10c0c;
