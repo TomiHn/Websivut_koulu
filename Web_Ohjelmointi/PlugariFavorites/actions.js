@@ -24,12 +24,13 @@ function RemoveFromList(e, index){
     initProgram(storedLinks);
 }
 
-const UpdateStorage = (storedLinks) => {
+const UpdateStorage = (storedLinks, update = true) => {
     const value = JSON.stringify(storedLinks);
     chrome.storage.sync.set({listOfLinks:value}, function(){
         // console.log(`${addedName} Lisättiin`);
         storedLinks = JSON.parse(value);
-        initProgram(storedLinks);
+        if(update) initProgram(storedLinks);
+        
     });//set
 }
 chrome.storage.sync.get(["listOfLinks"], function(result){
@@ -59,10 +60,24 @@ modifyList.addEventListener("click", function(){
     // console.log("xd")
     storedLinks.forEach((link, index) => {
         let oneLink = document.createElement("div");
-        oneLink.classList = "delete-button";
-        oneLink.innerHTML = "<span class='icon delete-icon'>-</span><span class='delete-text'>" + link.name + "</span>";
-        oneLink.onclick = (e) => RemoveClick(e, index, cancelModify);
+        oneLink.classList = "modify-button";
         linkContainer.appendChild(oneLink);
+        //Luodaan poistonappi
+        let oneLinkDeleteButton = document.createElement("span");
+        oneLinkDeleteButton.classList = "icon delete-icon";
+        oneLinkDeleteButton.innerText = "-";
+        oneLinkDeleteButton.onclick = (e) => RemoveClick(e, index, cancelModify);
+        oneLink.appendChild(oneLinkDeleteButton);
+
+        let oneLinkModifyText = document.createElement("input");
+        oneLinkModifyText.classList = "modify-text";
+        oneLinkModifyText.value = link.name;
+        oneLinkModifyText.onkeyup = (e) => updateLinkText(e, index);
+        oneLink.appendChild(oneLinkModifyText);
+
+        // oneLink.classList = "delete-button";
+        // oneLink.innerHTML = "<span class='icon delete-icon'>-</span><span class='delete-text'>" + link.name + "</span>";
+
     })
 
 
@@ -70,6 +85,7 @@ modifyList.addEventListener("click", function(){
     let cancelModify = document.createElement("button");
     document.body.appendChild(cancelModify);
     cancelModify.innerHTML = "❌";
+    cancelModify.style.fontSize = "1.5em";
     cancelModify.addEventListener("click", function(){
         initProgram(storedLinks);
         modifyList.style.display = "inline-block";
@@ -82,7 +98,16 @@ const RemoveClick = (e, _index, cancelModify) => {
     RemoveFromList(e, _index);
     modifyList.style.display = "inline-block";
     cancelModify.remove();
+
+    let sound = document.createElement("audio");
+    sound.id = "delete-sound";
+    sound.src = "remove.mp3";
+    sound.play();
 }
+const updateLinkText = (e, index) => {
+    storedLinks[index].name = e.target.value;
+    UpdateStorage(storedLinks, false);
+};
 
 async function GetCurrentTab(){
     let queryOptions = {active: true, lastFocusedWindow: true};
