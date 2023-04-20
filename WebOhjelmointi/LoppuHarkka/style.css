@@ -1,6 +1,7 @@
 :root {
   --bgColor: #838181b0;
   --topBgColor: #d7d7d7b0;
+  --bottomColor: white;
 }
 
 body {
@@ -76,4 +77,12 @@ main {
   margin-left: 20px;
   margin-top: 20px;
   font-size: 1.2em;
+  /* color: var(--bottomColor); */
+}
+
+
+/*Javascriptissä luodut elementit*/
+.commands:hover{
+  color: var(--bottomColor);
+  transition: 0.5s;
 }
